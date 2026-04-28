@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Café | Vijayawada's Finest</title>
+    <style>
+        :root {
+            --primary: #d4a373; /* Warm Coffee Tone */
+            --bg: #0f1115;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Background Visuals */
+        .ambient-glow {
+            position: fixed;
+            width: 50vw;
+            height: 50vh;
+            background: radial-gradient(circle, rgba(212, 163, 115, 0.1) 0%, rgba(0,0,0,0) 70%);
+            top: -10%;
+            right: -10%;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero Section */
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            letter-spacing: 4px;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .tagline {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        /* Menu Grid */
+        .section-title {
+            margin: 3rem 0 1.5rem;
+            font-size: 1.5rem;
+            border-left: 3px solid var(--primary);
+            padding-left: 1rem;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .menu-item {
+            background: var(--glass);
+            padding: 1.5rem;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            backdrop-filter: blur(10px);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .item-desc {
+            font-size: 0.85rem;
+            color: #9ca3af;
+        }
+
+        /* Info Cards */
+        .info-card {
+            background: rgba(212, 163, 115, 0.05);
+            padding: 2rem;
+            border-radius: 20px;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: 0.3s;
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem 0;
+            color: #4b5563;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 600px) {
+            .menu-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-glow"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">BLOOM</div>
+            <div class="tagline">Vijayawada's Finest Café</div>
+            <p style="margin-top: 2rem; color: #9ca3af;">Where every sip tells a story.</p>
+        </header>
+
+        <section id="story" class="info-card">
+            <h2 style="color: var(--primary);">Our Story</h2>
+            <p>Sourcing specialty beans directly from Coorg and Chikmagalur. Roasted to perfection every week in the heart of Vijayawada.</p>
+        </section>
+
+        <h2 class="section-title">Specialty Coffee</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4>Bloom Filter Coffee</h4>
+                    <span class="price">₹180</span>
+                </div>
+                <p class="item-desc">House blend, slow dripped, served with jaggery cream.</p>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4>Rose Cold Brew</h4>
+                    <span class="price">₹220</span>
+                </div>
+                <p class="item-desc">18-hour brew infused with dried rose petals and cardamom.</p>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4>Saffron Latte</h4>
+                    <span class="price">₹260</span>
+                </div>
+                <p class="item-desc">Warm oat milk with real saffron strands and vanilla.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Fresh Baked</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4>Avocado Toast</h4>
+                    <span class="price">₹320</span>
+                </div>
+                <p class="item-desc">Sourdough, cherry tomatoes, and microgreens.</p>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h4>Almond Croissant</h4>
+                    <span class="price">₹180</span>
+                </div>
+                <p class="item-desc">Flaky, house-made almond cream, baked fresh at 6 AM.</p>
+            </div>
+        </div>
+
+        <section id="visit" class="info-card" style="background: var(--glass);">
+            <h3>Find Us</h3>
+            <p>12, MG Road, Near Kanaka Durga Temple<br>Vijayawada, 520001</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">Mon-Fri: 7:30 AM - 10:00 PM</p>
+            <a href="https://maps.google.com" class="cta-btn">Open in Maps</a>
+        </section>
+
+        <footer>
+            <p>© 2026 Bloom Café Vijayawada. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
